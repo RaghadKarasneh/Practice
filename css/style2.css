@@ -7,75 +7,18 @@ body{
     grid-template-columns: repeat(3,auto);
     grid-template-rows: repeat(2,auto);
     gap: 50px;
-    border: 1px solid white;
     padding: 50px;
 }
 .container div{
     overflow: hidden;
 }
-.container .overlay{
-    position: relative;
-    top: 125px;
-    left: 125px;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0,0,0,0.6);
-    color:white;
-    text-align: center;
-    opacity:0;
-    transition: opacity 0.25s
-}
-.container .hexagon .overlay,
-.container .pentagon .overlay{
-    transform: translate(9%,-90%);
-    width: 96%;
-}
-.container .hexagon .overlay h2{
-    margin-bottom: 5px;
-}
-.container .hexagon .overlay p{
-    font-size:15px;
-    padding: 0 12px;
-}
-.container .pentagon .overlay p{
-    font-size:15px;
-    padding: 0 17px;
-}
-.container .pentagon .overlay h2{
-    margin-bottom: 5px;
-    padding-top: 35px;
-}
-.container .overlay p{
-    margin-bottom: 0;
-}
-.container .overlay button{
-    margin: 5px;
-    border-radius: 10px;
-    background: #212020;
-    opacity: 0.7;
-    color: white;
-}
-.container .overlay{
-    top: -16px;
-    left: 0px;
-    height: 112%;
-    width: 100%;
-}
-.container .overlay h2{
-    padding-top: 20px;
-}
-.container div:hover .overlay{ 
-   opacity: 1;
-}
+/* Shapes*/
 .circle{
     height: 250px;
     width: 250px;
     border-radius: 50%;
     background-size:cover;
     background-repeat: no-repeat;
-}
-.container .circle .overlay h2{
-    margin-bottom: 5px;
 }
 .hexagon{
     height: 250px;
@@ -91,6 +34,63 @@ body{
     background-size:cover;
     background-repeat: no-repeat;
 }
+/*Overlay layer*/
+.container .overlay{
+    position: relative;
+    top: -16px;
+    left: 0px;
+    height: 112%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    color:white;
+    text-align: center;
+    opacity:0;
+    transition: opacity 0.25s;
+}
+.container .overlay p{
+    margin-bottom: 0;
+}
+.container .overlay button{
+    margin: 5px;
+    border-radius: 10px;
+    background: #212020;
+    opacity: 0.7;
+    color: white;
+}
+.container .overlay h2{
+    padding-top: 20px;
+}
+.container .hexagon .overlay,
+.container .pentagon .overlay{
+    transform: translate(9%,-90%);
+    width: 96%;
+}
+/* Circle Overlay content*/
+.container .circle .overlay h2{
+    margin-bottom: 5px;
+}
+/* Hexagon Overlay content*/
+.container .hexagon .overlay h2{
+    margin-bottom: 5px;
+}
+.container .hexagon .overlay p{
+    font-size:15px;
+    padding: 0 12px;
+}
+/* Pentagon Overlay content*/
+.container .pentagon .overlay p{
+    font-size:15px;
+    padding: 0 17px;
+}
+.container .pentagon .overlay h2{
+    margin-bottom: 5px;
+    padding-top: 35px;
+}
+
+.container div:hover .overlay{ 
+   opacity: 1;
+}
+/*Images Divs*/
 .first-img{
     grid-area: 1/1;
     background-image: url('https://th.bing.com/th/id/R.c154b34daa16ab100d23b4b8b0fccbc4?rik=DabDhrC9Z3XEvA&riu=http%3a%2f%2fsr.photos1.fotosearch.com%2fbthumb%2fCSP%2fCSP826%2fk19526205.jpg&ehk=l%2bvm0ymbVhhrJf3DxRXCKr%2fPGv7%2blm69KtsrELZYqYo%3d&risl=&pid=ImgRaw&r=0');
@@ -115,4 +115,20 @@ body{
 .sixth-img{
     grid-area: 2/3;
     background-image: url('https://th.bing.com/th/id/OIP.3UEUblS_mcvu2HzDgUErDgAAAA?pid=ImgDet&rs=1');
+}
+
+/* Media Query*/
+@media screen and (min-width:993px) and (max-width:1025px) {
+    .container{
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width:992px) {
+    .container{
+        display: block;
+        margin-left: 20px;
+    }
+    .container div{
+        margin-top: 20px;
+    }
 }
