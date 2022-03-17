@@ -1,0 +1,14 @@
+body{
+    background-image: url('../background.jfif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    line-height: 1.5;
+
+}
+ul li{
+    margin: 10px;
+}
+ul li a{
+    font-size: 25px;
+    text-decoration: none;
+}

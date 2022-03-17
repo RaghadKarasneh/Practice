@@ -1,0 +1,66 @@
+body{
+    background-image: url('https://wallup.net/wp-content/uploads/2018/03/19/588849-animals-cat.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: repeat(3,auto);
+    gap: 10px;
+}
+.first-circle,
+.second-circle,
+.third-circle,
+.fourth-circle,
+.fifth-circle,
+.sixth-circle,
+.seventh-circle,
+.eighth-circle,
+.nineth-circle{
+    height: 400px;
+    width: 100%;
+    border-radius: 50%;
+    background-color: rgb(9, 247, 175);
+    display: block;
+    transition: 1s ease-in;
+}
+.first-circle{
+    grid-area: 1/1;
+}
+.second-circle{
+    grid-area: 1/2;
+}
+.third-circle{
+    grid-area: 1/3;
+}
+.fourth-circle{
+    grid-area: 2/1;
+}
+.fifth-circle{
+    grid-area: 2/2;
+}
+.sixth-circle{
+    grid-area: 2/3;
+}
+.seventh-circle{
+    grid-area: 3/1;
+}
+.eighth-circle{
+    grid-area: 3/2;
+}
+.nineth-circle{
+    grid-area: 3/3;
+}
+.first-circle:hover,
+.second-circle:hover,
+.third-circle:hover,
+.fourth-circle:hover,
+.fifth-circle:hover,
+.sixth-circle:hover,
+.seventh-circle:hover,
+.eighth-circle:hover,
+.nineth-circle:hover
+{
+    display: none;
+}
